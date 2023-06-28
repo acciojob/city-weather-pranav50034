@@ -20,13 +20,17 @@ const App = () => {
            appid: "8c48dec99ef0f494f3a51cc7f47bd5ad",
         },
      })
-     .then(response=> setData(response.data))
+     .then(response=> {
+      setData(response.data)
+    })
      .catch(err=>{
       setData("")
       setError("No city found")
     });
+    
+    e.target[0].value=""
 
-     setError("")
+    setError("")
   }
 
   return (
